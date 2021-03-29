@@ -33,7 +33,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 fluttertoast: ^7.1.1
-http: ^0.12.2
+http: ^0.13.1
    
 
 # For information on the generic Dart part of this file, see the
@@ -51,8 +51,10 @@ flutter:
   assets:
     - assets/avatar/
     - assets/execucoes/
-    - assets/fundos/          
-
+    - assets/fundos/
+    - assets/logo_trabalhadorpronto.jpg
+    - assets/icones/
+    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

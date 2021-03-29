@@ -109,7 +109,6 @@ class _HelloListViewState extends State<HelloListView> {
                 profissional.nome,
                 style: TextStyle(fontSize: 20, color: Colors.white),
               ),
-              
             ),
           ),
         ],

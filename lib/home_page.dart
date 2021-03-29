@@ -1,17 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:meutcc/drawer_list.dart';
+import 'package:meutcc/pages/login_page3.dart';
 import 'package:meutcc/pages/hello_listView.dart';
 import 'package:meutcc/pages/login_page.dart';
 import 'package:meutcc/utils/nav.dart';
 import 'package:meutcc/widgets/blue_button.dart';
+
+import 'pages/login_page3.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("MeChamou.com"),
-        centerTitle: true,
+        title: Center(
+          child: SizedBox(
+            width: 65,
+            child: Image.asset("assets/logo_trabalhadorpronto.jpg"),
+          ),
+        ),
+        actions: [
+          Container(
+            width: 70,
+            child: Icon(
+              Icons.search,
+              color: Color(0xFFBABABA),
+            ),
+          )
+        ],
       ),
       body: _body(context),
       floatingActionButton: Row(
@@ -92,8 +108,8 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 BlueButton("Login/Cadastro",
-                    onPressed: () => _onClickNavigator(context, LoginPage())),
-                BlueButton("Lista de Profissionais",
+                    onPressed: () => _onClickNavigator(context, LoginPage3())),
+                BlueButton("Profissionais",
                     onPressed: () =>
                         _onClickNavigator(context, HelloListView())),
 
@@ -104,8 +120,8 @@ class HomePage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                BlueButton("Snack", onPressed: () => _onClickSnack(context)),
-                BlueButton("Acesso", onPressed: () => _onClickDialog(context)),
+                // BlueButton("Snack", onPressed: () => _onClickSnack(context)),
+                //  BlueButton("Acesso", onPressed: () => _onClickDialog(context)),
                 // BlueButton("Toast", onPressed: _onClickToast)
               ],
             )
@@ -183,13 +199,13 @@ _img(String img) {
 
 _text() {
   return Text(
-    "Como posso ajudar?",
+    "Seja Bem Vindo!",
     style: TextStyle(
         fontSize: 40,
         color: Colors.blue,
         fontWeight: FontWeight.bold,
         fontStyle: FontStyle.italic,
         decoration: TextDecoration.underline,
-        decorationColor: Colors.red),
+        decorationColor: Colors.blue),
   );
 }
