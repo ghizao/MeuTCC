@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:meutcc/pages/login_page3.dart';
+
+import 'utils/nav.dart';
 
 class DrawerList extends StatelessWidget {
   @override
@@ -41,14 +44,26 @@ class DrawerList extends StatelessWidget {
               title: Text("Pagamento"),
               subtitle: Text("informações"),
               trailing: Icon(Icons.arrow_forward),
-              onTap: () {
-                print("chama alguma pagina ou função");
-                Navigator.pop(context);
-              },
+              onTap: () => _onClickLogout(context),
+            ),
+            ListTile(
+              leading: Icon(Icons.help),
+              title: Text("Logout"),
+              subtitle: Text("Sair"),
+              trailing: Icon(Icons.arrow_forward),
+              onTap: () => _onClickLogout(context),
             ),
           ],
         ),
       ),
+    );
+  }
+
+  _onClickLogout(BuildContext context) {
+    Navigator.pop(context);
+    push(
+      context,
+      LoginPage3(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meutcc/views/user_list.dart';
 
 import '../home_page.dart';
 
@@ -117,9 +118,6 @@ class LoginPage3 extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            SizedBox(
-              height: 40,
-            ),
             Container(
               height: 60,
               alignment: Alignment.centerLeft,
@@ -160,14 +158,43 @@ class LoginPage3 extends StatelessWidget {
               height: 10,
             ),
             Container(
-              height: 40,
-              child: FlatButton(
-                child: Text(
-                  "Cadastre-se",
-                  textAlign: TextAlign.center,
+              height: 60,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: Color(0xFF3C5A99),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(5),
                 ),
-                onPressed: () {},
               ),
+              child: SizedBox.expand(
+                child: FlatButton(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Text(
+                        "Cadastre-se Aqui",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => UserList(),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
             ),
           ],
         ),
