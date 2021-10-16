@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meutcc/pages/login_page3.dart';
 import 'package:meutcc/provider/users.dart';
 import 'package:meutcc/routes/app_routes.dart';
 import 'package:meutcc/views/user_form.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primaryColor: Colors.blue,
         ),
-        home: HomePage(),
+        home: LoginPage3(),
         routes: {AppRoutes.USER_FORM: (_) => UserForm()},
       ),
     );

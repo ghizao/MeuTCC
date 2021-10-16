@@ -5,7 +5,7 @@ import 'package:meutcc/data/dummy_users.dart';
 import 'package:meutcc/models/user.dart';
 
 class Users with ChangeNotifier {
-  static const _baseUrl = "https://mechamou-78f27.firebaseio.com/";
+  static const _baseUrl = "https://mechamou-tcc-default-rtdb.firebaseio.com/";
   final Map<String, User> _items = {...DUMMY_USERS};
 
   List<User> get all {
